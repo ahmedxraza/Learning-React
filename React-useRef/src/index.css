@@ -1,0 +1,17 @@
+/* @import "tailwindcss"; */
+
+/* This resets everything to zero */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding-top: 50px;
+  background-color: #181818;
+  color: blanchedalmond;
+  /* background-color: #151515;
+  color: beige; */
+}
