@@ -1,24 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 
 function App() {
+  const { r, toggle } = useToggle();
   return (
     <div>
-      <MyComp />
+      <button onClick={toggle}>Click: {r.toString()}</button>
+      <p>Light is {r ? "On" : "Off"}</p>
     </div>
   );
 }
 
-function MyComp() {
-  const [count, setCount] = useState(0);
-  function increment() {
-    setCount(count + 1);
+function useToggle() {
+  const [r, setR] = useState(false);
+  function toggle() {
+    setR((r) => !r);
   }
-  return (
-    <>
-      <p>Counter : {count}</p>
-      <button onClick={increment}>Click</button>
-    </>
-  );
+  return { r, toggle };
 }
 
 export default App;
